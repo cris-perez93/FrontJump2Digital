@@ -1,18 +1,15 @@
-import Budget from "./Budget";
-import Request from "./Requests";
-import Return from "./Retorno";
+import SingleValue from "./SingleValue";
 import FilterMonth from "./FilterMonth";
 
 const MonthlyData = () => {
     return (
         <>
-         <Request/>
-         <Return/>
-         <Budget/>
+         <SingleValue title="Accepted Requests"/>
+         <SingleValue title="Loan Return Time"/>
+         <SingleValue title="Budget"/>
+        
          <FilterMonth/>
-
          </>
-
      );
 }
  
