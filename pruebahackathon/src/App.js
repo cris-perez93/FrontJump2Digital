@@ -24,9 +24,9 @@ const ContainerData = styled.div`
 `
 
 const ContainerGraficos = styled.div`
-  background:white;
-  width:500px;
-  padding : 20px;
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
 `
 
 function App() {
@@ -39,7 +39,6 @@ function App() {
      <FilterMonth/>
      </ContainerData>
      <ContainerGraficos>
-       GRAFICOS
        <Chart></Chart>
       <Chart></Chart>
      </ContainerGraficos>

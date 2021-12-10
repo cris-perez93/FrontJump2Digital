@@ -1,7 +1,6 @@
 import { 
   LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer 
 } from 'recharts';
-import { useEffect, useState } from 'react';
 
 const data = [
   {name: 'january', uv: 400, pv: 2400, amt: 2400},
@@ -10,15 +9,8 @@ const data = [
 ];
 
 function Chart(props) {
-  /*
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-
-  }, []);*/
-
   return (
-    <ResponsiveContainer width="50%" height={400}>
+    <ResponsiveContainer width="45%" height={400}>
       <LineChart 
         data={data}
         margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
