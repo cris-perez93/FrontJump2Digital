@@ -29,7 +29,7 @@ const FilterMonth = (props) => {
            value={props?.option}
         >
           {props.options?.map((option) => (
-            <option>{option?.month}</option>
+            <option>{option}</option>
           ))}
         </Select>
         <Button color="success" variant="contained">Update</Button>
