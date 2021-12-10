@@ -10,7 +10,7 @@ const ContainerReturn = styled.div`
 const Return = () => {
     return (
         <ContainerReturn>
-            <h1>Tiempo de retorno</h1>>
+            <h1>Tiempo de retorno</h1>
         </ContainerReturn>
       );
 }
