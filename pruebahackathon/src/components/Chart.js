@@ -18,7 +18,7 @@ function Chart(props) {
   }, []);*/
 
   return (
-    <ResponsiveContainer width="100%" aspect="width">
+    <ResponsiveContainer width="50%" height={400}>
       <LineChart 
         data={data}
         margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
