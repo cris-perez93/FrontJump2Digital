@@ -3,9 +3,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
 import { useState, useEffect } from 'react';
-const jsonObject = require('./api/JUMPDATA.json')
-
-
 
 const Select = styled.select`
    width: 200px;
@@ -22,21 +19,26 @@ const Form = styled.form`
 
 
 
-const FilterMonth =  () => {
+const FilterMonth = (props) => {
 
+  const [fecha, setFecha] = useState('')
 
-
+  const handleChange = e => {
+    setFecha({
+        ...props.month,
+        [e.target.name] : e.target.value
+    })
+}
   return (
     <div>
       <Form>
         
         <Select
-          labelId="demo-multiple-name-label"
-          id="demo-multiple-name"
-         
+           onChange={handleChange}
+           value={props.month}
         >
-          {jsonObject.map((date) => (
-            <option>{date.nameUUID}</option>
+          {props.options.map((option) => (
+            <option>{option.month}</option>
           ))}
         </Select>
         <Button color="success" variant="contained">Update</Button>

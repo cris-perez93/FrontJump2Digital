@@ -2,6 +2,7 @@ import Chart from "./components/Chart";
 import MonthlyData from "./components/MonthlyData";
 import Footer from "./components/Footer";
 import styled from "styled-components";
+const jsonObject = require('./JUMPDATA.json')
 
 const chartData = [
   {name: 'january', value: 400},
@@ -9,11 +10,14 @@ const chartData = [
   {name: 'march', value: 200}
 ];
 
-const monthlyData = {
-  acceptedRequests: 4,
-  loanReturnTime: 5,
-  budget: 6
-}
+const monthlyData = jsonObject.map(month => {
+  return {
+    month: month.nameUUID,
+    acceptedRequests: month.aceptedRequestPaid,
+    loanReturnTime: month.loanReturnTime,
+    budget: month.realBudget,
+  }
+});
 
 const Container = styled.div`
   display: flex;
