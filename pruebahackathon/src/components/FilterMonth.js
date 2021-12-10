@@ -20,25 +20,16 @@ const Form = styled.form`
 
 
 const FilterMonth = (props) => {
-
-  const [fecha, setFecha] = useState('')
-
-  const handleChange = e => {
-    setFecha({
-        ...props.month,
-        [e.target.name] : e.target.value
-    })
-}
   return (
     <div>
       <Form>
         
         <Select
-           onChange={handleChange}
-           value={props.month}
+           onChange={(e)=>props.onSelectMonth(e.target.value)}
+           value={props?.option}
         >
-          {props.options.map((option) => (
-            <option>{option.month}</option>
+          {props.options?.map((option) => (
+            <option>{option?.month}</option>
           ))}
         </Select>
         <Button color="success" variant="contained">Update</Button>
