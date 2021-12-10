@@ -4,6 +4,12 @@ import styled from "styled-components";
 
 import Footer from "./components/Footer";
 
+const chartData = [
+  {name: 'january', value: 400},
+  {name: 'february', value: 600},
+  {name: 'march', value: 200}
+];
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,8 +41,8 @@ function App() {
           <DataComponent />
         </ContainerData>
         <ContainerGraficos>
-          <Chart></Chart>
-          <Chart></Chart>
+          <Chart title="Requested Money" data={chartData}></Chart>
+          <Chart title="Total Users" data={chartData}></Chart>
         </ContainerGraficos>
       </Container>
       <Footer />
