@@ -2,7 +2,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+const jsonObject = require('./api/JUMPDATA.json')
+
+
 
 const Select = styled.select`
    width: 200px;
@@ -18,28 +21,10 @@ const Form = styled.form`
 
 
 
-const names = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
-];
+
+const FilterMonth =  () => {
 
 
-
-
- const FilterMonth = () => {
-
-  
-
-
-  
 
   return (
     <div>
@@ -48,10 +33,10 @@ const names = [
         <Select
           labelId="demo-multiple-name-label"
           id="demo-multiple-name"
-          value = 'Date'
+         
         >
-          {names.map((name) => (
-            <option>{name}</option>
+          {jsonObject.map((date) => (
+            <option>{date.nameUUID}</option>
           ))}
         </Select>
         <Button color="success" variant="contained">Update</Button>
