@@ -1,8 +1,7 @@
 import Chart from "./components/Chart";
-import DataComponent from "./components/DataComponent";
-import styled from "styled-components";
-
+import MonthlyData from "./components/MonthlyData";
 import Footer from "./components/Footer";
+import styled from "styled-components";
 
 const chartData = [
   {name: 'january', value: 400},
@@ -20,14 +19,15 @@ const Container = styled.div`
   
   padding: 20px;
 `;
-const ContainerData = styled.div`
+
+const MonthlyDataContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 40px;
   margin-bottom: 50px;
 `;
 
-const ContainerGraficos = styled.div`
+const ChartContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -37,13 +37,13 @@ function App() {
   return (
     <>
       <Container>
-        <ContainerData>
-          <DataComponent />
-        </ContainerData>
-        <ContainerGraficos>
-          <Chart title="Requested Money" data={chartData}></Chart>
-          <Chart title="Total Users" data={chartData}></Chart>
-        </ContainerGraficos>
+        <MonthlyDataContainer>
+          <MonthlyData />
+        </MonthlyDataContainer>
+        <ChartContainer>
+          <Chart title="Requested Money" data={chartData} />
+          <Chart title="Total Users" data={chartData} />
+        </ChartContainer>
       </Container>
       <Footer />
     </>

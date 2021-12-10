@@ -3,7 +3,7 @@ import Request from "./Requests";
 import Return from "./Retorno";
 import FilterMonth from "./FilterMonth";
 
-const DataComponent = () => {
+const MonthlyData = () => {
     return (
         <>
          <Request/>
@@ -16,4 +16,4 @@ const DataComponent = () => {
      );
 }
  
-export default DataComponent;
+export default MonthlyData;
