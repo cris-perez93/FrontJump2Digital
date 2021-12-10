@@ -7,7 +7,7 @@ import  {ContainerData}  from "./Ui/ContainerData";
 const Return = () => {
     return (
         <ContainerData>
-            <h1>Tiempo de retorno</h1>
+            <p>Tiempo de retorno</p>
         </ContainerData>
       );
 }

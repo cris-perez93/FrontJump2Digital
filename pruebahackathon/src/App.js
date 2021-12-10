@@ -1,49 +1,46 @@
 import Chart from "./components/Chart";
-import FilterMonth from "./components/FilterMonth";
-import Request from "./components/Requests";
+import DataComponent from "./components/DataComponent";
 import styled from "styled-components";
-import Return from "./components/Retorno"
-import Budget from "./components/Budget";
+
+import Footer from "./components/Footer";
 
 const Container = styled.div`
-   display:flex;
-   flex-direction:column;
-   justify-content: space-between;
-   margin:0 auto;
-   margin-top: 50px;
-   width: 80%;
-   height: 700px;
-   padding: 20px;
-   
-   
-`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  width: 80%;
+  
+  padding: 20px;
+`;
 const ContainerData = styled.div`
   display: flex;
-  align-items:center;
+  align-items: center;
   gap: 40px;
-`
+  margin-bottom: 50px;
+`;
 
 const ContainerGraficos = styled.div`
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-`
+`;
 
 function App() {
   return (
-   <Container>
-     <ContainerData>
-     <Request/>
-     <Return/>
-     <Budget/>
-     <FilterMonth/>
-     </ContainerData>
-     <ContainerGraficos>
-       <Chart></Chart>
-      <Chart></Chart>
-     </ContainerGraficos>
-     
-   </Container>
+    <>
+      <Container>
+        <ContainerData>
+          <DataComponent />
+        </ContainerData>
+        <ContainerGraficos>
+          <Chart></Chart>
+          <Chart></Chart>
+        </ContainerGraficos>
+      </Container>
+      <Footer />
+    </>
   );
 }
 

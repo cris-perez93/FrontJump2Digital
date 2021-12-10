@@ -6,7 +6,7 @@ import  {ContainerData}  from "./Ui/ContainerData";
 const Budget = () => {
     return ( 
         <ContainerData>
-            <h1>Budget</h1>
+            <p>Budget</p>
         </ContainerData>
      );
 }

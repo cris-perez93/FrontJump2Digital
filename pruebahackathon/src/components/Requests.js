@@ -8,7 +8,7 @@ import { ContainerData } from "./Ui/ContainerData";
 const Request = () => {
     return (
         <ContainerData>
-        <h1>Request</h1>
+        <p>Request</p>
         </ContainerData>
       );
 }
