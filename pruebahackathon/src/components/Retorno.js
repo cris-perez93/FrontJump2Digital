@@ -1,17 +1,14 @@
 import styled from "styled-components";
+import  {ContainerData}  from "./Ui/ContainerData";
 
-const ContainerReturn = styled.div`
-  background: green;
-  width: 200px;
-  height:200px;
-`
+
 
 
 const Return = () => {
     return (
-        <ContainerReturn>
+        <ContainerData>
             <h1>Tiempo de retorno</h1>
-        </ContainerReturn>
+        </ContainerData>
       );
 }
 export default Return;

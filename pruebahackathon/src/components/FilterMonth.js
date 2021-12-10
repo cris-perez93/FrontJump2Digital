@@ -5,6 +5,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import Button from '@mui/material/Button';
 import { useState } from 'react';
 
 
@@ -17,6 +18,7 @@ const MenuProps = {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 250,
+      
     },
   },
 };
@@ -82,8 +84,9 @@ function getStyles(name, personName, theme) {
             </MenuItem>
           ))}
         </Select>
+        <Button color="success" variant="contained">Update</Button>
       </FormControl>
-    </div>
+    </div> 
   );
 }
 export default FilterMonth;
