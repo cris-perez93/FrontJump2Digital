@@ -51,7 +51,7 @@ const names = [
           value = 'Date'
         >
           {names.map((name) => (
-            <option>{name}</option>
+            <option key={name}>{name}</option>
           ))}
         </Select>
         <Button color="success" variant="contained">Update</Button>
