@@ -1,16 +1,13 @@
 import styled from "styled-components";
+import  {ContainerData}  from "./Ui/ContainerData";
 
-const ContainerBudget = styled.div`
-  background: yellow;
-  width: 200px;
-  height:200px;
-`
+
 
 const Budget = () => {
     return ( 
-        <ContainerBudget>
+        <ContainerData>
             <h1>Budget</h1>
-        </ContainerBudget>
+        </ContainerData>
      );
 }
  

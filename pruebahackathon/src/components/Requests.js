@@ -1,19 +1,15 @@
 
 import styled from "styled-components";
+import { ContainerData } from "./Ui/ContainerData";
 
-const Container = styled.div`
- background: red;
- width: 200px;
-  height:200px
 
-`
 
 
 const Request = () => {
     return (
-        <Container>
+        <ContainerData>
         <h1>Request</h1>
-        </Container>
+        </ContainerData>
       );
 }
  
