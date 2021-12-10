@@ -9,6 +9,12 @@ const chartData = [
   {name: 'march', value: 200}
 ];
 
+const monthlyData = {
+  acceptedRequests: 4,
+  loanReturnTime: 5,
+  budget: 6
+}
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,7 +43,7 @@ function App() {
   return (
     <>
       <Container>
-        <MonthlyDataContainer>
+        <MonthlyDataContainer data={monthlyData}>
           <MonthlyData />
         </MonthlyDataContainer>
         <ChartContainer>
