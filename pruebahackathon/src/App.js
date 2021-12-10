@@ -1,3 +1,4 @@
+import Chart from "./components/Chart";
 import FilterMonth from "./components/FilterMonth";
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
      <h1>COMPONENTE</h1>
      <FilterMonth/>
 
-     
+     <Chart></Chart>
+     <Chart></Chart>
    </div>
   );
 }
