@@ -43,8 +43,8 @@ function App() {
   return (
     <>
       <Container>
-        <MonthlyDataContainer data={monthlyData}>
-          <MonthlyData />
+        <MonthlyDataContainer>
+          <MonthlyData data={monthlyData} />
         </MonthlyDataContainer>
         <ChartContainer>
           <Chart title="Requested Money" data={chartData} />
